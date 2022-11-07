@@ -1,4 +1,6 @@
 "use strict";
+const listTeam= document.getElementById("list-team");
+
 const ourTeam=[
    {
     fullName: 'Wayne Barnett',
@@ -39,6 +41,11 @@ const ourTeam=[
 console.log(ourTeam);
 for (let i = 0; i < ourTeam.length; i++) {
     const team = ourTeam[i];
+    const informationTeam =
+        <h3>Nome del collaboratore:</h3>;
+        <p>Tipo di mansione:</p>;
+        <p>Immagine del collaboratore:</p>;
     
     console.log(team.fullName, team.job, team.immage);
 }
+
