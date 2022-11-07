@@ -42,12 +42,13 @@ console.log(ourTeam);
 for (let i = 0; i < ourTeam.length; i++) {
     const team = ourTeam[i];
         const informationTeam =`
-           <li>
+           <li class="list">
                <h3>Nome del collaboratore: ${team.fullName}</h3>
                <p>Tipo di mansione: ${team.job}</p>
-               <p>Immagine del collaboratore: ${team.immage}</p>;
-           </li>;
-        `;    
+               <p>Immagine del collaboratore: ${team.immage}</p>
+           </li>
+        `;
+            
         document.getElementById("list-team").innerHTML += informationTeam;
         console.log(team.fullName, team.job, team.immage);
 }
