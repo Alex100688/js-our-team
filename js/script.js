@@ -1,5 +1,5 @@
 "use strict";
-const listTeam= document.getElementById("list-team");
+ 
 
 const ourTeam=[
    {
@@ -7,7 +7,7 @@ const ourTeam=[
     job:'Founder & CEO',
     immage: 'wayne-barnett-founder-ceo.jpg'
    },
-   
+  
    {
     fullName: 'Angela Caroll',
     job:'Chief Editor',
@@ -36,16 +36,19 @@ const ourTeam=[
     fullName: 'Barbara Ramos',
     job:'Graphic Designer',
     immage: 'barbara-ramos-graphic-designer.jpg'
-   }
+   },
 ];
 console.log(ourTeam);
 for (let i = 0; i < ourTeam.length; i++) {
     const team = ourTeam[i];
-    const informationTeam =
-        <h3>Nome del collaboratore:</h3>;
-        <p>Tipo di mansione:</p>;
-        <p>Immagine del collaboratore:</p>;
-    
-    console.log(team.fullName, team.job, team.immage);
+        const informationTeam =`
+           <li>
+               <h3>Nome del collaboratore: ${team.fullName}</h3>
+               <p>Tipo di mansione: ${team.job}</p>
+               <p>Immagine del collaboratore: ${team.immage}</p>;
+           </li>;
+        `;    
+        document.getElementById("list-team").innerHTML += informationTeam;
+        console.log(team.fullName, team.job, team.immage);
 }
 
