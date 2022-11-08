@@ -41,11 +41,14 @@ const ourTeam=[
 console.log(ourTeam);
 for (let i = 0; i < ourTeam.length; i++) {
     const team = ourTeam[i];
+    console.log(team.fullName, team.job, team.immage);
         const informationTeam =`
-           <li class="list">
+           <li class="list"                       >
                <h3>Nome del collaboratore: ${team.fullName}</h3>
+               <div>
+                <img src="img/${team.immage}"> 
+               </div>
                <p>Tipo di mansione: ${team.job}</p>
-               <p>Immagine del collaboratore: ${team.immage}</p>
            </li>
         `;
             
